@@ -1,4 +1,10 @@
+<escape>{
+"cleanUrls": false,
+"trailingSlash": false,
+"rewrites": [
 {
-  "cleanUrls": false,
-  "trailingSlash": false
+"source": "/",
+"destination": "/index.html"
 }
+]
+}</escape>
