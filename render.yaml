@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: saut-ffmpeg-renderer
+    runtime: docker
+    plan: free
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MAX_UPLOAD_MB
+        value: "100"
+      - key: MAX_DURATION_SECONDS
+        value: "900"
+      - key: FRONTEND_ORIGIN
+        value: "*"
